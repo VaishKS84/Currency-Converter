@@ -1,0 +1,71 @@
+package Projects;
+    import java.util.Scanner;
+
+    public class CurrencyConverter {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Currency Converter: Indian Rupees to Different Currencies");
+            System.out.println("1. US Dollar");
+            System.out.println("2. Euro");
+            System.out.println("3. British Pound");
+            System.out.println("4. Japanese Yen");
+            System.out.println("5. Australian Dollar");
+            System.out.println("6. Canadian Dollar");
+            System.out.println("7. Exit");
+
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            double indianRupees;
+            double result;
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 0.014; // Conversion rate: 1 INR = 0.014 USD
+                    System.out.println("Amount in US Dollar: " + result);
+                    break;
+                case 2:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 0.013; // Conversion rate: 1 INR = 0.013 EUR
+                    System.out.println("Amount in Euro: " + result);
+                    break;
+                case 3:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 0.012; // Conversion rate: 1 INR = 0.012 GBP
+                    System.out.println("Amount in British Pound: " + result);
+                    break;
+                case 4:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 1.48; // Conversion rate: 1 INR = 1.48 JPY
+                    System.out.println("Amount in Japanese Yen: " + result);
+                    break;
+                case 5:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 0.020; // Conversion rate: 1 INR = 0.020 AUD
+                    System.out.println("Amount in Australian Dollar: " + result);
+                    break;
+                case 6:
+                    System.out.print("Enter amount in Indian Rupees: ");
+                    indianRupees = scanner.nextDouble();
+                    result = indianRupees * 0.018; // Conversion rate: 1 INR = 0.018 CAD
+                    System.out.println("Amount in Canadian Dollar: " + result);
+                    break;
+                case 7:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Exiting...");
+            }
+
+            scanner.close();
+        }
+    }
+
+
